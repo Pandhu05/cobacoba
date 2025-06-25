@@ -24,14 +24,45 @@
       position: relative;
     }
 
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    .planet-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
       margin-bottom: 20px;
+      animation: rotate 20s linear infinite;
+    }
+
+    .planet-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Efek Orbit Cincin Saturnus */
+    .planet-container::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      height: 60px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotateX(65deg);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
     }
 
     h1, p {
@@ -83,8 +114,10 @@
 
 <body>
 
-  <!-- Profil: Ganti Foto ke Planet Saturnus -->
-  <img class="profile-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg" alt="Planet Saturnus">
+  <!-- Profil: Planet Saturnus dengan Animasi Orbit -->
+  <div class="planet-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg" alt="Planet Saturnus">
+  </div>
 
   <h1>Rahmanhidayatur</h1>
   <p>Apalah Apalah Apalah Apalah</p>
