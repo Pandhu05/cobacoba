@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Link Saya</title>
-  <meta name="description" content="Link pribadi Rahmanhidayatur ke Instagram, YouTube, WhatsApp, dan Email.">
-  <meta name="keywords" content="Linktree, Rahman, Instagram, YouTube, WhatsApp, Email">
   <style>
     body {
       margin: 0;
@@ -20,16 +18,14 @@
       align-items: center;
       padding: 40px 20px;
       color: white;
-      overflow-x: hidden;
-      position: relative;
     }
 
     .planet-container {
-      position: relative;
       width: 150px;
       height: 150px;
       margin-bottom: 20px;
       animation: rotate 20s linear infinite;
+      position: relative;
     }
 
     .planet-container img {
@@ -41,7 +37,6 @@
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     }
 
-    /* Efek Orbit Cincin Saturnus */
     .planet-container::before {
       content: '';
       position: absolute;
@@ -84,23 +79,36 @@
     }
 
     .link-button {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
       background: rgba(0, 0, 0, 0.6);
       color: white;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      border-radius: 8px;
       border: 1px solid rgba(255,255,255,0.3);
+      margin: 10px 0;
+      transition: background 0.3s, transform 0.3s;
+      max-width: 320px;
+      width: 100%;
     }
 
     .link-button:hover {
       background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .link-text {
+      flex: 1;
+      text-align: left;
     }
 
     footer {
@@ -114,19 +122,34 @@
 
 <body>
 
-  <!-- Profil: Planet Saturnus dengan Animasi Orbit -->
+  <!-- Planet Saturnus Berputar -->
   <div class="planet-container">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg" alt="Planet Saturnus">
   </div>
 
-  <h1>RAHMANHIDAYATUR</h1>
-  <p>Dunia maya adalah cara saya berekspresi:^</p>
+  <h1>Rahmanhidayatur</h1>
+  <p>Apalah Apalah Apalah Apalah</p>
 
-  <!-- Link -->
-  <a class="link-button" href="https://www.instagram.com/_pnndhu/" target="_blank">Instagram</a>
-  <a class="link-button" href="https://wa.me/6283114197803" target="_blank">WhatsApp</a>
-  <a class="link-button" href="https://www.youtube.com/@ziaoftpan9963" target="_blank">YouTube</a>
-  <a class="link-button" href="mailto:pandhurahman430@gmail.com" target="_blank">Email</a>
+  <!-- Link dengan Ikon Horizontal Rapi -->
+  <a class="link-button" href="https://www.instagram.com/_pnndhu/" target="_blank">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    <span class="link-text">Instagram</span>
+  </a>
+
+  <a class="link-button" href="https://wa.me/6283114197803" target="_blank">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    <span class="link-text">WhatsApp</span>
+  </a>
+
+  <a class="link-button" href="https://www.youtube.com/@ziaoftpan9963" target="_blank">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    <span class="link-text">YouTube</span>
+  </a>
+
+  <a class="link-button" href="mailto:pandhurahman430@gmail.com" target="_blank">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+    <span class="link-text">Email</span>
+  </a>
 
   <footer>&copy; 2025 pandhu</footer>
 
